@@ -54,7 +54,7 @@ app.post("/player/growid/login/validate", async (req, res) => {
     if (
       typeof growId !== 'string' || growId.length < 3 || growId.length > 20 ||
       (password && (typeof password !== 'string' || password.length < 3 || password.length > 25)) ||
-      typeof _token !== 'string' || _token.length < 50 || _token.length > 600
+      typeof _token !== 'string' || _token.length < 10 || _token.length > 2048
     ) {
       return res.json({
         status: "failed",
