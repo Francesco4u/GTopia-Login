@@ -95,7 +95,15 @@ app.post("/player/growid/login/validate", async (req, res) => {
 });
 
 app.post("/player/growid/checktoken", async (req, res) => {
-  
+  console.log("========== CHECKTOKEN ==========");
+  console.log("Headers:", req.headers);
+  console.log("Body:", req.body);
+  console.log("================================");
+
+  return res.json({
+    status: "success",
+    message: "CheckToken OK"
+  });
 });
 
 app.get("/player/validate/close", (req, res) => {
